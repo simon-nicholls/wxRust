@@ -8,7 +8,7 @@
 extern mod native;
 extern mod wx;
 
-use std::libc::c_void;
+use libc::c_void;
 
 use wx::_unsafe::*;
 use wx::defs::*;
