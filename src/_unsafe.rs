@@ -3,158 +3,136 @@
 pub type int8_t = ::libc::c_char;
 pub type int16_t = ::libc::c_short;
 pub type int32_t = ::libc::c_int;
-pub type int64_t = ::libc::c_longlong;
+pub type int64_t = ::libc::c_long;
 pub type uint8_t = ::libc::c_uchar;
 pub type uint16_t = ::libc::c_ushort;
 pub type uint32_t = ::libc::c_uint;
-pub type uint64_t = ::libc::c_ulonglong;
-pub type int_least8_t = int8_t;
-pub type int_least16_t = int16_t;
-pub type int_least32_t = int32_t;
-pub type int_least64_t = int64_t;
-pub type uint_least8_t = uint8_t;
-pub type uint_least16_t = uint16_t;
-pub type uint_least32_t = uint32_t;
-pub type uint_least64_t = uint64_t;
-pub type int_fast8_t = int8_t;
-pub type int_fast16_t = int16_t;
-pub type int_fast32_t = int32_t;
-pub type int_fast64_t = int64_t;
-pub type uint_fast8_t = uint8_t;
-pub type uint_fast16_t = uint16_t;
-pub type uint_fast32_t = uint32_t;
-pub type uint_fast64_t = uint64_t;
+pub type uint64_t = ::libc::c_ulong;
+pub type int_least8_t = ::libc::c_char;
+pub type int_least16_t = ::libc::c_short;
+pub type int_least32_t = ::libc::c_int;
+pub type int_least64_t = ::libc::c_long;
+pub type uint_least8_t = ::libc::c_uchar;
+pub type uint_least16_t = ::libc::c_ushort;
+pub type uint_least32_t = ::libc::c_uint;
+pub type uint_least64_t = ::libc::c_ulong;
+pub type int_fast8_t = ::libc::c_char;
+pub type int_fast16_t = ::libc::c_long;
+pub type int_fast32_t = ::libc::c_long;
+pub type int_fast64_t = ::libc::c_long;
+pub type uint_fast8_t = ::libc::c_uchar;
+pub type uint_fast16_t = ::libc::c_ulong;
+pub type uint_fast32_t = ::libc::c_ulong;
+pub type uint_fast64_t = ::libc::c_ulong;
+pub type intptr_t = ::libc::c_long;
+pub type uintptr_t = ::libc::c_ulong;
+pub type intmax_t = ::libc::c_long;
+pub type uintmax_t = ::libc::c_ulong;
+pub type size_t = ::libc::c_ulong;
+pub type __u_char = ::libc::c_uchar;
+pub type __u_short = ::libc::c_ushort;
+pub type __u_int = ::libc::c_uint;
+pub type __u_long = ::libc::c_ulong;
 pub type __int8_t = ::libc::c_char;
 pub type __uint8_t = ::libc::c_uchar;
 pub type __int16_t = ::libc::c_short;
 pub type __uint16_t = ::libc::c_ushort;
 pub type __int32_t = ::libc::c_int;
 pub type __uint32_t = ::libc::c_uint;
-pub type __int64_t = ::libc::c_longlong;
-pub type __uint64_t = ::libc::c_ulonglong;
-pub type __darwin_intptr_t = ::libc::c_long;
-pub type __darwin_natural_t = ::libc::c_uint;
-pub type __darwin_ct_rune_t = ::libc::c_int;
+pub type __int64_t = ::libc::c_long;
+pub type __uint64_t = ::libc::c_ulong;
+pub type __quad_t = ::libc::c_long;
+pub type __u_quad_t = ::libc::c_ulong;
+pub type __dev_t = ::libc::c_ulong;
+pub type __uid_t = ::libc::c_uint;
+pub type __gid_t = ::libc::c_uint;
+pub type __ino_t = ::libc::c_ulong;
+pub type __ino64_t = ::libc::c_ulong;
+pub type __mode_t = ::libc::c_uint;
+pub type __nlink_t = ::libc::c_ulong;
+pub type __off_t = ::libc::c_long;
+pub type __off64_t = ::libc::c_long;
+pub type __pid_t = ::libc::c_int;
 #[repr(C)]
-pub struct __mbstate_t {
-    pub data: [u64, ..16u],
+pub struct Struct_Unnamed1 {
+    pub __val: [::libc::c_int, ..2u],
 }
-impl __mbstate_t {
-    pub fn __mbstate8(&mut self) -> *mut [::libc::c_char, ..128u] {
-        unsafe { ::std::mem::transmute(self) }
-    }
-    pub fn _mbstateL(&mut self) -> *mut ::libc::c_longlong {
-        unsafe { ::std::mem::transmute(self) }
-    }
-}
-pub type __darwin_mbstate_t = __mbstate_t;
-pub type __darwin_ptrdiff_t = ::libc::c_long;
-pub type __darwin_size_t = ::libc::c_ulong;
-pub type __darwin_wchar_t = ::libc::c_int;
-pub type __darwin_rune_t = __darwin_wchar_t;
-pub type __darwin_wint_t = ::libc::c_int;
-pub type __darwin_clock_t = ::libc::c_ulong;
-pub type __darwin_socklen_t = __uint32_t;
-pub type __darwin_ssize_t = ::libc::c_long;
-pub type __darwin_time_t = ::libc::c_long;
+pub type __fsid_t = Struct_Unnamed1;
+pub type __clock_t = ::libc::c_long;
+pub type __rlim_t = ::libc::c_ulong;
+pub type __rlim64_t = ::libc::c_ulong;
+pub type __id_t = ::libc::c_uint;
+pub type __time_t = ::libc::c_long;
+pub type __useconds_t = ::libc::c_uint;
+pub type __suseconds_t = ::libc::c_long;
+pub type __daddr_t = ::libc::c_int;
+pub type __key_t = ::libc::c_int;
+pub type __clockid_t = ::libc::c_int;
+pub type __timer_t = *mut ::libc::c_void;
+pub type __blksize_t = ::libc::c_long;
+pub type __blkcnt_t = ::libc::c_long;
+pub type __blkcnt64_t = ::libc::c_long;
+pub type __fsblkcnt_t = ::libc::c_ulong;
+pub type __fsblkcnt64_t = ::libc::c_ulong;
+pub type __fsfilcnt_t = ::libc::c_ulong;
+pub type __fsfilcnt64_t = ::libc::c_ulong;
+pub type __fsword_t = ::libc::c_long;
+pub type __ssize_t = ::libc::c_long;
+pub type __syscall_slong_t = ::libc::c_long;
+pub type __syscall_ulong_t = ::libc::c_ulong;
+pub type __loff_t = __off64_t;
+pub type __qaddr_t = *mut __quad_t;
+pub type __caddr_t = *mut ::libc::c_char;
+pub type __intptr_t = ::libc::c_long;
+pub type __socklen_t = ::libc::c_uint;
 #[repr(C)]
-pub struct Struct___darwin_pthread_handler_rec {
-    pub __routine: ::std::option::Option<extern "C" fn
-                                             (arg1: *mut ::libc::c_void)>,
-    pub __arg: *mut ::libc::c_void,
-    pub __next: *mut Struct___darwin_pthread_handler_rec,
-}
-#[repr(C)]
-pub struct Struct__opaque_pthread_attr_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char, ..56u],
-}
-#[repr(C)]
-pub struct Struct__opaque_pthread_cond_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char, ..40u],
-}
-#[repr(C)]
-pub struct Struct__opaque_pthread_condattr_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char, ..8u],
-}
-#[repr(C)]
-pub struct Struct__opaque_pthread_mutex_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char, ..56u],
+pub struct Struct_timeval {
+    pub tv_sec: __time_t,
+    pub tv_usec: __suseconds_t,
 }
 #[repr(C)]
-pub struct Struct__opaque_pthread_mutexattr_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char, ..8u],
+pub struct Struct_timex {
+    pub modes: ::libc::c_uint,
+    pub offset: __syscall_slong_t,
+    pub freq: __syscall_slong_t,
+    pub maxerror: __syscall_slong_t,
+    pub esterror: __syscall_slong_t,
+    pub status: ::libc::c_int,
+    pub constant: __syscall_slong_t,
+    pub precision: __syscall_slong_t,
+    pub tolerance: __syscall_slong_t,
+    pub time: Struct_timeval,
+    pub tick: __syscall_slong_t,
+    pub ppsfreq: __syscall_slong_t,
+    pub jitter: __syscall_slong_t,
+    pub shift: ::libc::c_int,
+    pub stabil: __syscall_slong_t,
+    pub jitcnt: __syscall_slong_t,
+    pub calcnt: __syscall_slong_t,
+    pub errcnt: __syscall_slong_t,
+    pub stbcnt: __syscall_slong_t,
+    pub tai: ::libc::c_int,
+    pub unnamed_field1: ::libc::c_int,
+    pub unnamed_field2: ::libc::c_int,
+    pub unnamed_field3: ::libc::c_int,
+    pub unnamed_field4: ::libc::c_int,
+    pub unnamed_field5: ::libc::c_int,
+    pub unnamed_field6: ::libc::c_int,
+    pub unnamed_field7: ::libc::c_int,
+    pub unnamed_field8: ::libc::c_int,
+    pub unnamed_field9: ::libc::c_int,
+    pub unnamed_field10: ::libc::c_int,
+    pub unnamed_field11: ::libc::c_int,
 }
-#[repr(C)]
-pub struct Struct__opaque_pthread_once_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char, ..8u],
-}
-#[repr(C)]
-pub struct Struct__opaque_pthread_rwlock_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char, ..192u],
-}
-#[repr(C)]
-pub struct Struct__opaque_pthread_rwlockattr_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char, ..16u],
-}
-#[repr(C)]
-pub struct Struct__opaque_pthread_t {
-    pub __sig: ::libc::c_long,
-    pub __cleanup_stack: *mut Struct___darwin_pthread_handler_rec,
-    pub __opaque: [::libc::c_char, ..1168u],
-}
-pub type __darwin_blkcnt_t = __int64_t;
-pub type __darwin_blksize_t = __int32_t;
-pub type __darwin_dev_t = __int32_t;
-pub type __darwin_fsblkcnt_t = ::libc::c_uint;
-pub type __darwin_fsfilcnt_t = ::libc::c_uint;
-pub type __darwin_gid_t = __uint32_t;
-pub type __darwin_id_t = __uint32_t;
-pub type __darwin_ino64_t = __uint64_t;
-pub type __darwin_ino_t = __darwin_ino64_t;
-pub type __darwin_mach_port_name_t = __darwin_natural_t;
-pub type __darwin_mach_port_t = __darwin_mach_port_name_t;
-pub type __darwin_mode_t = __uint16_t;
-pub type __darwin_off_t = __int64_t;
-pub type __darwin_pid_t = __int32_t;
-pub type __darwin_pthread_attr_t = Struct__opaque_pthread_attr_t;
-pub type __darwin_pthread_cond_t = Struct__opaque_pthread_cond_t;
-pub type __darwin_pthread_condattr_t = Struct__opaque_pthread_condattr_t;
-pub type __darwin_pthread_key_t = ::libc::c_ulong;
-pub type __darwin_pthread_mutex_t = Struct__opaque_pthread_mutex_t;
-pub type __darwin_pthread_mutexattr_t = Struct__opaque_pthread_mutexattr_t;
-pub type __darwin_pthread_once_t = Struct__opaque_pthread_once_t;
-pub type __darwin_pthread_rwlock_t = Struct__opaque_pthread_rwlock_t;
-pub type __darwin_pthread_rwlockattr_t = Struct__opaque_pthread_rwlockattr_t;
-pub type __darwin_pthread_t = *mut Struct__opaque_pthread_t;
-pub type __darwin_sigset_t = __uint32_t;
-pub type __darwin_suseconds_t = __int32_t;
-pub type __darwin_uid_t = __uint32_t;
-pub type __darwin_useconds_t = __uint32_t;
-pub type __darwin_uuid_t = [::libc::c_uchar, ..16u];
-pub type __darwin_uuid_string_t = [::libc::c_char, ..37u];
-pub type intptr_t = __darwin_intptr_t;
-pub type uintptr_t = ::libc::c_ulong;
-pub type intmax_t = ::libc::c_long;
-pub type uintmax_t = ::libc::c_ulong;
-pub type __darwin_nl_item = ::libc::c_int;
-pub type __darwin_wctrans_t = ::libc::c_int;
-pub type __darwin_wctype_t = __uint32_t;
+pub type clock_t = __clock_t;
+pub type time_t = __time_t;
+pub type clockid_t = __clockid_t;
+pub type timer_t = __timer_t;
 #[repr(C)]
 pub struct Struct_timespec {
-    pub tv_sec: __darwin_time_t,
-    pub tv_nsec: ::libc::c_long,
+    pub tv_sec: __time_t,
+    pub tv_nsec: __syscall_slong_t,
 }
-pub type clock_t = __darwin_clock_t;
-pub type size_t = __darwin_size_t;
-pub type time_t = __darwin_time_t;
 #[repr(C)]
 pub struct Struct_tm {
     pub tm_sec: ::libc::c_int,
@@ -167,40 +145,95 @@ pub struct Struct_tm {
     pub tm_yday: ::libc::c_int,
     pub tm_isdst: ::libc::c_int,
     pub tm_gmtoff: ::libc::c_long,
-    pub tm_zone: *mut ::libc::c_char,
+    pub tm_zone: *const ::libc::c_char,
 }
+#[repr(C)]
+pub struct Struct_itimerspec {
+    pub it_interval: Struct_timespec,
+    pub it_value: Struct_timespec,
+}
+pub enum Struct_sigevent { }
+pub type pid_t = __pid_t;
+#[repr(C)]
+pub struct Struct___locale_struct {
+    pub __locales: [*mut Struct___locale_data, ..13u],
+    pub __ctype_b: *const ::libc::c_ushort,
+    pub __ctype_tolower: *const ::libc::c_int,
+    pub __ctype_toupper: *const ::libc::c_int,
+    pub __names: [*const ::libc::c_char, ..13u],
+}
+pub enum Struct___locale_data { }
+pub type __locale_t = *mut Struct___locale_struct;
+pub type locale_t = __locale_t;
 extern "C" {
-    pub static mut tzname: *mut *mut ::libc::c_char;
-    pub static mut getdate_err: ::libc::c_int;
-    pub static mut timezone: ::libc::c_long;
+    pub static mut __tzname: [*mut ::libc::c_char, ..2u];
+    pub static mut __daylight: ::libc::c_int;
+    pub static mut __timezone: ::libc::c_long;
+    pub static mut tzname: [*mut ::libc::c_char, ..2u];
     pub static mut daylight: ::libc::c_int;
-    pub fn asctime(arg1: *Struct_tm) -> *mut ::libc::c_char;
-    pub fn clock() -> clock_t;
-    pub fn ctime(arg1: *time_t) -> *mut ::libc::c_char;
-    pub fn difftime(arg1: time_t, arg2: time_t) -> ::libc::c_double;
-    pub fn getdate(arg1: *::libc::c_char) -> *mut Struct_tm;
-    pub fn gmtime(arg1: *time_t) -> *mut Struct_tm;
-    pub fn localtime(arg1: *time_t) -> *mut Struct_tm;
-    pub fn mktime(arg1: *mut Struct_tm) -> time_t;
-    pub fn strftime(arg1: *mut ::libc::c_char, arg2: size_t,
-                    arg3: *::libc::c_char, arg4: *Struct_tm) -> size_t;
-    pub fn strptime(arg1: *::libc::c_char, arg2: *::libc::c_char,
-                    arg3: *mut Struct_tm) -> *mut ::libc::c_char;
-    pub fn time(arg1: *mut time_t) -> time_t;
-    pub fn tzset();
-    pub fn asctime_r(arg1: *Struct_tm, arg2: *mut ::libc::c_char) ->
-     *mut ::libc::c_char;
-    pub fn ctime_r(arg1: *time_t, arg2: *mut ::libc::c_char) ->
-     *mut ::libc::c_char;
-    pub fn gmtime_r(arg1: *time_t, arg2: *mut Struct_tm) -> *mut Struct_tm;
-    pub fn localtime_r(arg1: *time_t, arg2: *mut Struct_tm) -> *mut Struct_tm;
-    pub fn posix2time(arg1: time_t) -> time_t;
-    pub fn tzsetwall();
-    pub fn time2posix(arg1: time_t) -> time_t;
-    pub fn timelocal(arg1: *mut Struct_tm) -> time_t;
-    pub fn timegm(arg1: *mut Struct_tm) -> time_t;
-    pub fn nanosleep(arg1: *Struct_timespec, arg2: *mut Struct_timespec) ->
+    pub static mut timezone: ::libc::c_long;
+    pub static mut getdate_err: ::libc::c_int;
+    pub fn clock_adjtime(__clock_id: __clockid_t, __utx: *mut Struct_timex) ->
      ::libc::c_int;
+    pub fn clock() -> clock_t;
+    pub fn time(__timer: *mut time_t) -> time_t;
+    pub fn difftime(__time1: time_t, __time0: time_t) -> ::libc::c_double;
+    pub fn mktime(__tp: *mut Struct_tm) -> time_t;
+    pub fn strftime(__s: *mut ::libc::c_char, __maxsize: size_t,
+                    __format: *const ::libc::c_char, __tp: *const Struct_tm)
+     -> size_t;
+    pub fn strptime(__s: *const ::libc::c_char, __fmt: *const ::libc::c_char,
+                    __tp: *mut Struct_tm) -> *mut ::libc::c_char;
+    pub fn strftime_l(__s: *mut ::libc::c_char, __maxsize: size_t,
+                      __format: *const ::libc::c_char, __tp: *const Struct_tm,
+                      __loc: __locale_t) -> size_t;
+    pub fn strptime_l(__s: *const ::libc::c_char,
+                      __fmt: *const ::libc::c_char, __tp: *mut Struct_tm,
+                      __loc: __locale_t) -> *mut ::libc::c_char;
+    pub fn gmtime(__timer: *const time_t) -> *mut Struct_tm;
+    pub fn localtime(__timer: *const time_t) -> *mut Struct_tm;
+    pub fn gmtime_r(__timer: *const time_t, __tp: *mut Struct_tm) ->
+     *mut Struct_tm;
+    pub fn localtime_r(__timer: *const time_t, __tp: *mut Struct_tm) ->
+     *mut Struct_tm;
+    pub fn asctime(__tp: *const Struct_tm) -> *mut ::libc::c_char;
+    pub fn ctime(__timer: *const time_t) -> *mut ::libc::c_char;
+    pub fn asctime_r(__tp: *const Struct_tm, __buf: *mut ::libc::c_char) ->
+     *mut ::libc::c_char;
+    pub fn ctime_r(__timer: *const time_t, __buf: *mut ::libc::c_char) ->
+     *mut ::libc::c_char;
+    pub fn tzset();
+    pub fn stime(__when: *const time_t) -> ::libc::c_int;
+    pub fn timegm(__tp: *mut Struct_tm) -> time_t;
+    pub fn timelocal(__tp: *mut Struct_tm) -> time_t;
+    pub fn dysize(__year: ::libc::c_int) -> ::libc::c_int;
+    pub fn nanosleep(__requested_time: *const Struct_timespec,
+                     __remaining: *mut Struct_timespec) -> ::libc::c_int;
+    pub fn clock_getres(__clock_id: clockid_t, __res: *mut Struct_timespec) ->
+     ::libc::c_int;
+    pub fn clock_gettime(__clock_id: clockid_t, __tp: *mut Struct_timespec) ->
+     ::libc::c_int;
+    pub fn clock_settime(__clock_id: clockid_t, __tp: *const Struct_timespec)
+     -> ::libc::c_int;
+    pub fn clock_nanosleep(__clock_id: clockid_t, __flags: ::libc::c_int,
+                           __req: *const Struct_timespec,
+                           __rem: *mut Struct_timespec) -> ::libc::c_int;
+    pub fn clock_getcpuclockid(__pid: pid_t, __clock_id: *mut clockid_t) ->
+     ::libc::c_int;
+    pub fn timer_create(__clock_id: clockid_t, __evp: *mut Struct_sigevent,
+                        __timerid: *mut timer_t) -> ::libc::c_int;
+    pub fn timer_delete(__timerid: timer_t) -> ::libc::c_int;
+    pub fn timer_settime(__timerid: timer_t, __flags: ::libc::c_int,
+                         __value: *const Struct_itimerspec,
+                         __ovalue: *mut Struct_itimerspec) -> ::libc::c_int;
+    pub fn timer_gettime(__timerid: timer_t, __value: *mut Struct_itimerspec)
+     -> ::libc::c_int;
+    pub fn timer_getoverrun(__timerid: timer_t) -> ::libc::c_int;
+    pub fn timespec_get(__ts: *mut Struct_timespec, __base: ::libc::c_int) ->
+     ::libc::c_int;
+    pub fn getdate(__string: *const ::libc::c_char) -> *mut Struct_tm;
+    pub fn getdate_r(__string: *const ::libc::c_char,
+                     __resbufp: *mut Struct_tm) -> ::libc::c_int;
     pub fn Null_AcceleratorTable() -> *mut ::libc::c_void;
     pub fn Null_Bitmap() -> *mut ::libc::c_void;
     pub fn Null_Brush() -> *mut ::libc::c_void;
@@ -2556,7 +2589,7 @@ extern "C" {
     pub fn DropSource_Create(data: *mut ::libc::c_void,
                              win: *mut ::libc::c_void,
                              copy: *mut ::libc::c_void,
-                             move: *mut ::libc::c_void,
+                             _move: *mut ::libc::c_void,
                              none: *mut ::libc::c_void) ->
      *mut ::libc::c_void;
     pub fn DropSource_Delete(_obj: *mut ::libc::c_void);
